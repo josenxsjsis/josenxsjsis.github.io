@@ -1,0 +1,55 @@
+<h1>Republica Dominicana</h1>
+
+<h2>El José</colgroup></h2>
+
+<title>Bandera de RD</title>
+
+
+<canvas width="900" height="900"></canvas>
+
+<script>
+    alert("Pagina de Jose, dale aceptar para ver la bandera");
+
+    var pantalla = document.querySelector("canvas");
+    var pincel = pantalla.getContext("2d");
+
+    pincel.fillStyle = "black"
+    pincel.fillRect(0,0,900,900);
+
+    pincel.fillStyle = "blue"
+    pincel.fillRect(0,0,400,400);
+
+    pincel.fillStyle = "red"
+    pincel.fillRect(500,0,400,400);
+
+    pincel.fillStyle = "red"
+    pincel.fillRect(0,500,400,400);
+
+    pincel.fillStyle = "blue"
+    pincel.fillRect(500,500,400,400);
+
+    pincel.fillStyle = "green"
+    pincel.fillRect(430,430,40,40);
+
+    function exibirAlerta(evento){
+        var x = evento.pageX - pantalla.offsetLeft;
+        var y = evento.pageY - pantalla.offsetTop;
+        console.log(evento);
+        alert(x + "," +  y);
+
+   }
+
+pantalla.onclick =  exibirAlerta;
+
+
+   // pincel.fillStyle = "green"
+    //pincel.beginPath();
+   // pincel.moveTo(450,50,);
+    //pincel.lineTo(500,450);
+    //pincel.lineTo(450,500);
+   // pincel.fill();
+
+
+</script>
+
+
